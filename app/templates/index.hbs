@@ -1,4 +1,8 @@
 <div class="header layout-column layout-align-center-center">
   <img src="img/hanglogo.png">
+  {{#paper-form as |form|}}
+  {{form.input label="Hasło" value=pass onChange=(action (mut pass)) required=true}}
+  {{#form.submit-button raised=true primary=true disabled=form.isInvalid}}Start!{{/form.submit-button}}
+  {{/paper-form}}
 </div>
 {{outlet}}
