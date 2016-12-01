@@ -1,6 +1,6 @@
 <div class="layout-row layout-wrap">
   {{#each letters as |letter|}}
-    {{ui/key-button letter}}
+    {{ui/key-button letter (action "addLetter")}}
   {{/each}}
 </div>
 {{yield}}

@@ -3,7 +3,7 @@ import Ember from 'ember';
 const component = Ember.Component.extend({
 
 }).reopenClass({
-  positionalParams: ['letter']
+  positionalParams: ['letter', 'addLetter']
 });
 
 export default component;
