@@ -1,9 +1,13 @@
-import { expect } from 'chai';
-import { describeComponent, it } from 'ember-mocha';
+import {
+  expect
+} from 'chai';
+import {
+  describeComponent,
+  it
+} from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describeComponent('ui/key-button', 'Integration | Component | ui/key button',
-  {
+describeComponent('ui/key-button', 'Integration | Component | ui/key button', {
     integration: true
   },
   function() {
@@ -16,8 +20,10 @@ describeComponent('ui/key-button', 'Integration | Component | ui/key button',
       //     template content
       //   {{/ui/key-button}}
       // `);
+      this.set('fakeAction', (x) => x);
 
-      this.render(hbs`{{ui/key-button}}`);
+
+      this.render(hbs `{{ui/key-button "A" (action fakeAction)}}`);
       expect(this.$()).to.have.length(1);
     });
   }

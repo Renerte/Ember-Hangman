@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   game: Ember.inject.service(),
   actions:{
     startGame(){
-      this.get('game').setup(this.get('pass'));
+      this.get('game').setup(this.get('pass').toUpperCase());
       this.transitionToRoute('game');
     }
   }
