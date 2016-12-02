@@ -1,9 +1,17 @@
-{{paper-progress-linear value=30}}
-<div style="text-align: center; font-size: 50px;">
-  {{filteredPassword}}
-</div>
+{{#if isTheWinner}}
 
-<div class="keyboard">
-  {{ui/key-board playerChoices}}
-</div>
+  <h1>You Won! :-) </h1>
+
+{{else}}
+  {{paper-progress-linear value=hp }}
+
+  <div style="text-align: center; font-size: 50px;" class="textPassword">
+    {{filteredPassword}}
+  </div>
+
+  <div class="keyboard">
+    {{ui/key-board playerChoices}}
+  </div>
+{{/if}}
+
 {{outlet}}
