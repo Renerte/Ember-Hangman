@@ -3,6 +3,9 @@
   <div class="layout-column layout-align-center-center">
     <h1>You Won! :-)</h1>
     <h3>The password was: {{game.password}}</h3>
+    {{#link-to 'index'}}
+    {{#paper-button raised=true primary=true}}Powrót{{/paper-button}}
+    {{/link-to}}
   </div>
 
 {{else}}
