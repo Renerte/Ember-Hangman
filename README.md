@@ -1,7 +1,10 @@
-# ember-hangman
+# ![Ember-Hangman](https://github.com/Renerte/Ember-Hangman/raw/master/public/img/hanglogo.png)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## [![Build Status](https://travis-ci.org/Renerte/Ember-Hangman.svg?branch=master)](https://travis-ci.org/Renerte/Ember-Hangman)
+
+## Play
+
+This app is being hosted at https://ember-hangman.firebaseapp.com/ ;)
 
 ## Prerequisites
 
@@ -9,13 +12,22 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
+* [Yarn](https://yarnpkg.com) (optional, but recommended)
 * [Bower](https://bower.io/)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* [PhantomJS](http://phantomjs.org/) (only when running tests outside browser)
 
-## Installation
+## Instalation with [Yarn](https://yarnpkg.com) (recommended)
 
-* `git clone <repository-url>` this repository
+* `npm install -g ember-cli yarn bower phantomjs-prebuilt`
+* `git clone https://github.com/Renerte/Ember-Hangman.git`
+* `cd ember-hangman`
+* `yarn install && bower install`
+
+## Installation (alternate)
+
+* `npm install -g ember-cli bower phantomjs-prebuilt`
+* `git clone https://github.com/Renerte/Ember-Hangman.git`
 * `cd ember-hangman`
 * `npm install`
 * `bower install`
@@ -34,14 +46,16 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember test`
 * `ember test --server`
 
+or visit [http://localhost:4200/tests](http://localhost:4200/tests) while serving ;)
+
 ### Building
 
 * `ember build` (development)
-* `ember build --environment production` (production)
+* `ember build -prod` (production)
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Deploy this app by uploading contents of `dist` folder to desired hosting.
 
 ## Further Reading / Useful Links
 
