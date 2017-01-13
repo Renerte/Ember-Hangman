@@ -9,8 +9,9 @@ export default Ember.Controller.extend({
   // filteredPassword: Ember.computed.map('password.[]',(letter) => this.get('playerChoices').includes(letter) ? letter : '-')
 
   filteredPassword: Ember.computed('game.password', 'playerChoices.[]', function () {
-    let password = this.get('game.password').split('');
-    return password.map((letter) => this.get('playerChoices').includes(letter) || letter == ' ' ? letter : '-').join('');
+    let password = this.get('game.password').split(''),
+      alphabet = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUVWXYZŻŹ".split('');
+    return password.map((letter) => this.get('playerChoices').includes(letter) || !alphabet.includes(letter) || letter == ' ' ? letter : '-').join('');
   }),
 
   isTheWinner: Ember.computed('game.password', 'playerChoices.[]', function () {
